@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BTK Güvenlik Uyarısı</title>
+    <style>
+      body {
+        background-color: black;
+        color: red;
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        padding-top: 50px;
+      }
+      #countdown {
+        font-size: 60px;
+        margin-top: 20px;
+      }
+      #btk-logo {
+        width: 150px;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script>
+      let seconds = 10;
+      function startCountdown() {
+        const countdown = document.getElementById("countdown");
+        const interval = setInterval(() => {
+          countdown.textContent = seconds;
+          seconds--;
+          if (seconds < 0) {
+            clearInterval(interval);
+            alert("📢 Numaranız BTK’ya bildirildi.");
+            alert("📞 Hat sahibine ulaşılacak...");
+      window.onload = startCountdown;
+    </script>
+  </head>
+  <body>
+    <img
+      id="btk-logo"
+      src="https://upload.wikimedia.org/wikipedia/tr/thumb/3/3b/Bilgi_Teknolojileri_ve_İletişim_Kurumu_logo.svg/600px-Bilgi_Teknolojileri_ve_İletişim_Kurumu_logo.svg.png"
+      alt="BTK Logosu"
+    />
+    <h1>⚠️ BTK Güvenlik İzleme Sistemi</h1>
+    <p>Numaranız şüpheli işlem nedeniyle bildirildi.</p>
+    <p>İşlem başlatılıyor...</p>
+    <div id="countdown">10</div>
+  </body>
+</html>
